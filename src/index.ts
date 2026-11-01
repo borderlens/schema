@@ -1,1 +1,1 @@
-export {};
+export { Weapon } from "./weapon.schema.js";

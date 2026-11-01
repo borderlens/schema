@@ -7,7 +7,7 @@ export default [eslint.configs.recommended, ...tseslint.configs.recommended, {
   ignores: ["dist/", "**/*.js"],
   plugins: {
     perfectionist,
-    "@stylistic": stylistic
+    "@stylistic": stylistic,
   },
   rules: {
     "padded-blocks": ["error", { classes: "always" }],
@@ -66,14 +66,20 @@ export default [eslint.configs.recommended, ...tseslint.configs.recommended, {
         "type-internal",
         "builtin",
         "external",
-        "foobar-group",
+        "base-group",
+        "utils-group",
         ["parent", "sibling", "index"],
       ],
       customGroups: [
         {
-          groupName: "foobar-group",
+          groupName: "base-group",
           modifiers: ["value"],
-          elementNamePattern: "^#(config|constants|errors|http|logger)(/.*)?$",
+          elementNamePattern: "^#base$",
+        },
+        {
+          groupName: "utils-group",
+          modifiers: ["value"],
+          elementNamePattern: "^#utils$",
         },
       ],
     }],
