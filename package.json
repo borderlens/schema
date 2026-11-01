@@ -12,13 +12,20 @@
   ],
   "imports": {
     "#src/*": "./dist/*",
-    "#base": "./dist/base/index.js",
-    "#utils": "./dist/utils/index.js"
+    "#base": "./dist/schemas/base/index.js",
+    "#utils": "./dist/schemas/utils/index.js"
   },
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
+    },
+    "./schemas": {
+      "types": "./dist/schemas/index.d.ts",
+      "import": "./dist/schemas/index.js"
+    },
+    "./types": {
+      "types": "./dist/types/index.d.ts"
     }
   },
   "main": "./dist/index.js",
@@ -34,7 +41,7 @@
     "@eslint/js": "^10.0.1",
     "@stylistic/eslint-plugin": "^5.10.0",
     "@types/node": "^26.6.6",
-    "eslint": "^10.13.0",
+    "eslint": "^10.14.0",
     "eslint-plugin-perfectionist": "^5.13.0",
     "typescript": "^6.0.3",
     "typescript-eslint": "^8.72.1",

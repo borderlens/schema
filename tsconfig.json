@@ -16,7 +16,12 @@
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
     "noUncheckedIndexedAccess": true,
-    "exactOptionalPropertyTypes": true
+    "exactOptionalPropertyTypes": true,
+    "paths": {
+      "#src/*": ["./src/*"],
+      "#base": ["./src/schemas/base/index.ts"],
+      "#utils": ["./src/schemas/utils/index.ts"]
+    }
   },
   "include": ["src"]
 }
