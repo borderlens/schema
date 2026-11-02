@@ -12,7 +12,7 @@ import { Accuracy, Capacity, Damage, FireRate, Magazine, RechargeRate } from "#s
  * @remarks
  * Artifacts are equipment bound to one character class.
  */
-export const Artifact = Base.extend({
+export const Artifact = Base.omit({ specialEffects: true, modifiers: true }).extend({
   category: z.object({
     primary: Category.extract(["artifact"]),
     secondary: Borderlands.Character,
@@ -25,7 +25,7 @@ export const Artifact = Base.extend({
  * @remarks
  * Class mods are equipment bound to one character class.
  */
-export const ClassMod = Base.extend({
+export const ClassMod = Base.omit({ modifiers: true }).extend({
   category: z.object({
     primary: Category.extract(["class-mod"]),
     secondary: Borderlands.Character,
