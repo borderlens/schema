@@ -13,6 +13,7 @@
   "imports": {
     "#src/*": "./dist/*",
     "#base": "./dist/schemas/base/index.js",
+    "#category": "./dist/schemas/category/index.js",
     "#utils": "./dist/schemas/utils/index.js"
   },
   "exports": {

@@ -67,6 +67,7 @@ export default [eslint.configs.recommended, ...tseslint.configs.recommended, {
         "builtin",
         "external",
         "base-group",
+        "category-group",
         "utils-group",
         ["parent", "sibling", "index"],
       ],
@@ -75,6 +76,11 @@ export default [eslint.configs.recommended, ...tseslint.configs.recommended, {
           groupName: "base-group",
           modifiers: ["value"],
           elementNamePattern: "^#base$",
+        },
+        {
+          groupName: "category-group",
+          modifiers: ["value"],
+          elementNamePattern: "^#category$",
         },
         {
           groupName: "utils-group",
