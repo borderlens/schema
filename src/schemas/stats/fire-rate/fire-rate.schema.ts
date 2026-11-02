@@ -1,0 +1,3 @@
+import { Array } from "#utils";
+
+export const FireRate = Array.OneOrTwoNumbers.describe("The item's fire rate across the levels and parts it can spawn with. Use [min, max] for the lowest and highest it can reach. Use [n] when fire rate does not change. Record the card figure as given. Do not convert it to rounds per second or rounds per minute unless the source states that unit. This is not the reload time, the burst delay, or an elemental proc rate. One dropped card is not the range.");

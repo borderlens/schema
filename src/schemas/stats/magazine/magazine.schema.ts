@@ -1,0 +1,3 @@
+import { Array } from "#utils";
+
+export const Magazine = Array.OneOrTwoNumbers.describe("The item's magazine size across the levels and parts it can spawn with: rounds or charges held in one magazine. Use [min, max] for the lowest and highest it can reach. Use [n] when the size does not change. Use [0] when the magazine is unlimited. This is not the reserve ammo pool, the projectiles per shot, or the ammo consumed per shot. One dropped card is not the range.");
