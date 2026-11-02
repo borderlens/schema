@@ -9,6 +9,7 @@ import { Id } from "#src/schemas/base/id/index.js";
 import { Manufacturer } from "#src/schemas/base/manufacturer/index.js";
 import { Modifiers } from "#src/schemas/base/modifiers/index.js";
 import { Name } from "#src/schemas/base/name/index.js";
+import { Prefix } from "#src/schemas/base/prefix/index.js";
 import { Rarity } from "#src/schemas/base/rarity/index.js";
 import { Slug } from "#src/schemas/base/slug/index.js";
 import { Sources } from "#src/schemas/base/sources/index.js";
@@ -26,6 +27,7 @@ export const Base = z.object({
   tags: Tags.optional(),
   name: Name,
   slug: Slug,
+  prefixes: z.array(Prefix).optional(),
   summary: Summary,
   description: Description,
   manufacturers: z.array(Manufacturer).min(1),

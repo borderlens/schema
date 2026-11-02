@@ -14,7 +14,7 @@ import { Accuracy, Capacity, Damage, FireRate, Magazine, RechargeRate } from "#s
  * @remarks
  * Artifacts are equipment bound to one character class.
  */
-export const Artifact = Base.omit({ modifiers: true }).extend({
+export const Artifact = Base.omit({ modifiers: true, prefixes: true }).extend({
   category: z.object({
     primary: Category.extract(["artifact"]),
     secondary: Borderlands.Character,
@@ -27,7 +27,7 @@ export const Artifact = Base.omit({ modifiers: true }).extend({
  * @remarks
  * Class mods are equipment bound to one character class.
  */
-export const ClassMod = Base.omit({ modifiers: true }).extend({
+export const ClassMod = Base.omit({ modifiers: true, prefixes: true }).extend({
   category: z.object({
     primary: Category.extract(["class-mod"]),
     secondary: Borderlands.Character,
@@ -45,7 +45,7 @@ export const ClassMod = Base.omit({ modifiers: true }).extend({
  * @remarks
  * Grenade mods are classified by how the grenade is delivered.
  */
-export const GrenadeMod = Base.extend({
+export const GrenadeMod = Base.omit({ prefixes: true }).extend({
   category: z.object({
     primary: Category.extract(["grenade-mod"]),
     secondary: SubCategories.GrenadeMod.extract([
