@@ -1,1 +1,1 @@
-export type { Weapon } from "./weapon.types.js";
+export type * as Borderlands from "./borderlands.types.js";

@@ -1,1 +1,1 @@
-export { Weapon } from "./weapon.schema.js";
+export * as Borderlands from "./borderlands.schema.js";
