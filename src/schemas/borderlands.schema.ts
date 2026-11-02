@@ -4,6 +4,7 @@ import { Base } from "#base";
 
 import { Category, SubCategories } from "#category";
 import { Borderlands } from "#class";
+import { Part } from "#part";
 import { Elemental, Other, Red, Status } from "#special-effects";
 import { Accuracy, Capacity, Damage, FireRate, Magazine, RechargeRate } from "#stats";
 
@@ -125,5 +126,13 @@ export const Weapon = Base.extend({
     elemental: Elemental.optional(),
     other: Other.optional(),
     status: Status.optional(),
+  }).optional(),
+  parts: z.object({
+    body: z.array(Part).optional(),
+    barrel: z.array(Part).optional(),
+    magazine: z.array(Part).optional(),
+    stock: z.array(Part).optional(),
+    sight: z.array(Part).optional(),
+    material: z.array(Part).optional(),
   }).optional(),
 });
