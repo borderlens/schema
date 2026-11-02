@@ -1,1 +1,1 @@
-export type { };
+export type { Weapon } from "./weapon.types.js";
