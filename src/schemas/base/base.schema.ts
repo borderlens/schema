@@ -12,7 +12,6 @@ import { Name } from "#src/schemas/base/name/index.js";
 import { Rarity } from "#src/schemas/base/rarity/index.js";
 import { Slug } from "#src/schemas/base/slug/index.js";
 import { Sources } from "#src/schemas/base/sources/index.js";
-import { SpecialEffects } from "#src/schemas/base/special-effects/index.js";
 import { Summary } from "#src/schemas/base/summary/index.js";
 import { Tags } from "#src/schemas/base/tags/index.js";
 import { Versions } from "#src/schemas/base/versions/index.js";
@@ -32,6 +31,5 @@ export const Base = z.object({
   manufacturers: z.array(Manufacturer).min(1),
   rarities: z.array(Rarity).min(1),
   elements: z.array(Element),
-  specialEffects: SpecialEffects.optional(),
   modifiers: Modifiers.optional(),
 });

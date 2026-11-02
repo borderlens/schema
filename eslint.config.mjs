@@ -80,7 +80,7 @@ export default [eslint.configs.recommended, ...tseslint.configs.recommended, {
         {
           groupName: "other-group",
           modifiers: ["value"],
-          elementNamePattern: "^#(category|class|stats)$",
+          elementNamePattern: "^#(category|class|special-effects|stats)$",
         },
         {
           groupName: "utils-group",

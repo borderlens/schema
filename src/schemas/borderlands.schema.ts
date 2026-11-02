@@ -4,6 +4,7 @@ import { Base } from "#base";
 
 import { Category, SubCategories } from "#category";
 import { Borderlands } from "#class";
+import { Elemental, Other, Red, Status } from "#special-effects";
 import { Accuracy, Capacity, Damage, FireRate, Magazine, RechargeRate } from "#stats";
 
 /**
@@ -12,7 +13,7 @@ import { Accuracy, Capacity, Damage, FireRate, Magazine, RechargeRate } from "#s
  * @remarks
  * Artifacts are equipment bound to one character class.
  */
-export const Artifact = Base.omit({ specialEffects: true, modifiers: true }).extend({
+export const Artifact = Base.omit({ modifiers: true }).extend({
   category: z.object({
     primary: Category.extract(["artifact"]),
     secondary: Borderlands.Character,
@@ -30,6 +31,11 @@ export const ClassMod = Base.omit({ modifiers: true }).extend({
     primary: Category.extract(["class-mod"]),
     secondary: Borderlands.Character,
   }),
+  specialEffects: z.object({
+    elemental: Elemental.optional(),
+    other: Other.optional(),
+    status: Status.optional(),
+  }).optional(),
 });
 
 /**
@@ -80,6 +86,12 @@ export const Shield = Base.extend({
     capacity: Capacity,
     rechargeRate: RechargeRate,
   }),
+  specialEffects: z.object({
+    red: Red.optional(),
+    elemental: Elemental.optional(),
+    other: Other.optional(),
+    status: Status.optional(),
+  }).optional(),
 });
 
 /**
@@ -108,4 +120,10 @@ export const Weapon = Base.extend({
     fireRate: FireRate,
     magazine: Magazine,
   }),
+  specialEffects: z.object({
+    red: Red.optional(),
+    elemental: Elemental.optional(),
+    other: Other.optional(),
+    status: Status.optional(),
+  }).optional(),
 });
