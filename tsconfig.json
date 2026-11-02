@@ -21,6 +21,7 @@
       "#src/*": ["./src/*"],
       "#base": ["./src/schemas/base/index.ts"],
       "#category": ["./src/schemas/category/index.ts"],
+      "#class": ["./src/schemas/class/index.ts"],
       "#stats": ["./src/schemas/stats/index.ts"],
       "#utils": ["./src/schemas/utils/index.ts"]
     }

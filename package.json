@@ -14,6 +14,7 @@
     "#src/*": "./dist/*",
     "#base": "./dist/schemas/base/index.js",
     "#category": "./dist/schemas/category/index.js",
+    "#class": "./dist/schemas/class/index.js",
     "#stats": "./dist/schemas/stats/index.js",
     "#utils": "./dist/schemas/utils/index.js"
   },
