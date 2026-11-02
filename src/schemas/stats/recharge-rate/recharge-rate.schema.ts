@@ -1,0 +1,3 @@
+import { Array } from "#utils";
+
+export const RechargeRate = Array.OneOrTwoNumbers.describe("The item's recharge rate across the levels and parts it can spawn with. Use [min, max] for the lowest and highest it can reach. Use [n] when the rate does not change. This is how fast it refills once recharging has started, not the delay before recharge begins and not its capacity. Record the card figure as given. Do not convert it to points per second unless the source states that unit. One dropped card is not the range.");
