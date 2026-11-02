@@ -1,5 +1,5 @@
 import { z } from "zod";
 
-import { Borderlands } from "#src/schemas/index.js";
+import { Weapon } from "#src/schemas/borderlands.schema.js";
 
-export type Weapon = z.infer<typeof Borderlands.Weapon>;
+export type Weapon = z.infer<typeof Weapon>;

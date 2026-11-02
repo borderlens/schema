@@ -1,0 +1,3 @@
+import { String } from "#utils";
+
+export const Slug = String.Slug.min(1).describe("Slug of this item's name only: lowercase the name and join its words with single hyphens. Collapse punctuation, apostrophes, and spaces so the result is one clean token - never doubled hyphens, leading or trailing hyphens, or leftover symbols (not foo--bar or -foo-). Keep digits that are part of the name. Do not append an id, item type, game, manufacturer, rarity, or a number to make it unique. Duplicate slugs are expected; type and game disambiguate them.");
