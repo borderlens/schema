@@ -6,6 +6,7 @@ import { Description } from "#src/schemas/base/description/index.js";
 import { Element } from "#src/schemas/base/element/index.js";
 import { Game } from "#src/schemas/base/game/index.js";
 import { Id } from "#src/schemas/base/id/index.js";
+import { Image } from "#src/schemas/base/image/index.js";
 import { Manufacturer } from "#src/schemas/base/manufacturer/index.js";
 import { Modifiers } from "#src/schemas/base/modifiers/index.js";
 import { Name } from "#src/schemas/base/name/index.js";
@@ -21,6 +22,7 @@ export const Base = z.object({
   id: Id,
   versions: Versions,
   sources: Sources.optional(),
+  image: Image,
   games: z.array(Game).min(1),
   content: Content,
   aliases: Aliases.optional(),
