@@ -1,5 +1,6 @@
 import { z } from "zod";
 
+import { Acquisition } from "#src/schemas/base/acquisition/index.js";
 import { Aliases } from "#src/schemas/base/aliases/index.js";
 import { Content } from "#src/schemas/base/content/index.js";
 import { Description } from "#src/schemas/base/description/index.js";
@@ -10,6 +11,7 @@ import { Image } from "#src/schemas/base/image/index.js";
 import { Manufacturer } from "#src/schemas/base/manufacturer/index.js";
 import { Modifiers } from "#src/schemas/base/modifiers/index.js";
 import { Name } from "#src/schemas/base/name/index.js";
+import { Notes } from "#src/schemas/base/notes/index.js";
 import { Prefix } from "#src/schemas/base/prefix/index.js";
 import { Rarity } from "#src/schemas/base/rarity/index.js";
 import { References } from "#src/schemas/base/references/index.js";
@@ -32,8 +34,10 @@ export const Base = z.object({
   prefixes: z.array(Prefix).optional(),
   summary: Summary,
   description: Description,
+  notes: Notes.optional(),
   manufacturers: z.array(Manufacturer).min(1),
   rarities: z.array(Rarity).min(1),
   elements: z.array(Element),
   modifiers: Modifiers.optional(),
+  acquisitions: z.array(Acquisition),
 });

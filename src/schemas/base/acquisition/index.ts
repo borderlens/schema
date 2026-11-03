@@ -1,0 +1,1 @@
+export { Acquisition } from "./acquisition.schema.js";
