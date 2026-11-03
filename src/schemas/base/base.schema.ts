@@ -12,8 +12,8 @@ import { Modifiers } from "#src/schemas/base/modifiers/index.js";
 import { Name } from "#src/schemas/base/name/index.js";
 import { Prefix } from "#src/schemas/base/prefix/index.js";
 import { Rarity } from "#src/schemas/base/rarity/index.js";
+import { References } from "#src/schemas/base/references/index.js";
 import { Slug } from "#src/schemas/base/slug/index.js";
-import { Sources } from "#src/schemas/base/sources/index.js";
 import { Summary } from "#src/schemas/base/summary/index.js";
 import { Tags } from "#src/schemas/base/tags/index.js";
 import { Versions } from "#src/schemas/base/versions/index.js";
@@ -21,7 +21,7 @@ import { Versions } from "#src/schemas/base/versions/index.js";
 export const Base = z.object({
   id: Id,
   versions: Versions,
-  sources: Sources.optional(),
+  references: References.optional(),
   image: Image,
   games: z.array(Game).min(1),
   content: Content,
