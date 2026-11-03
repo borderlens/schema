@@ -1,5 +1,6 @@
 import { z } from "zod";
 
+import { Ability } from "#src/schemas/base/ability/index.js";
 import { Acquisition } from "#src/schemas/base/acquisition/index.js";
 import { Aliases } from "#src/schemas/base/aliases/index.js";
 import { Content } from "#src/schemas/base/content/index.js";
@@ -35,6 +36,7 @@ export const Base = z.object({
   summary: Summary,
   description: Description,
   notes: Notes.optional(),
+  abilities: z.array(Ability).optional(),
   manufacturers: z.array(Manufacturer).min(1),
   rarities: z.array(Rarity).min(1),
   elements: z.array(Element),
